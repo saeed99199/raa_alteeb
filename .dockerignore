@@ -1,0 +1,10 @@
+.git
+.gitignore
+**/.DS_Store
+frontend
+backend/node_modules
+backend/vendor
+backend/storage/logs/*.log
+backend/storage/framework/cache/data
+backend/storage/framework/sessions
+backend/storage/framework/views

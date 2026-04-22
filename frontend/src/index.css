@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-900: #0e1628;
+  --brand-700: #15315f;
+  --brand-500: #2563eb;
+  --ink-900: #111827;
+  --surface: #f7f9fc;
+  --page-text: #111827;
+}
+
+html[data-theme='dark'] {
+  --brand-900: #151515;
+  --brand-700: #1f1f1f;
+  --brand-500: #8b5e3c;
+  --ink-900: #f3f4f6;
+  --surface: #141414;
+  --page-text: #f3f4f6;
+}
+
+html[dir='rtl'] {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 15px;
+}
+
+html[dir='ltr'] {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.16), transparent 28%),
+    radial-gradient(circle at 90% 5%, rgba(245, 158, 11, 0.14), transparent 26%),
+    linear-gradient(180deg, #f8fbff 0%, #edf3fb 100%);
+  color: var(--page-text);
+}
+
+html[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(139, 94, 60, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(59, 130, 246, 0.2), transparent 28%),
+    linear-gradient(180deg, #0e0e0f 0%, #141418 100%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #888; }
+
+/* Ant Design overrides */
+.ant-layout-sider { box-shadow: 8px 0 26px rgba(5, 20, 46, 0.35); }
+.ant-card {
+  box-shadow: 0 10px 26px rgba(22, 42, 77, 0.08);
+  border: 1px solid rgba(21, 49, 95, 0.08);
+}
+.ant-table-thead > tr > th { background: #fafafa !important; font-weight: 600; }
+
+html[data-theme='dark'] .ant-layout-sider { box-shadow: 8px 0 26px rgba(0, 0, 0, 0.55); }
+html[data-theme='dark'] .ant-card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+html[data-theme='dark'] .ant-table-thead > tr > th {
+  background: #1f1f24 !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+}

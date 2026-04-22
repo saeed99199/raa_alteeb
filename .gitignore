@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Laravel / Backend
+backend/vendor/
+backend/node_modules/
+backend/.env
+backend/.phpunit.result.cache
+backend/storage/*.key
+backend/storage/logs/*.log
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/testing/*
+backend/storage/framework/views/*
+backend/storage/debugbar/*
+
+# Keep framework directories tracked
+!backend/storage/framework/cache/.gitignore
+!backend/storage/framework/sessions/.gitignore
+!backend/storage/framework/testing/.gitignore
+!backend/storage/framework/views/.gitignore
+
+# IDE
+.vscode/
+.idea/

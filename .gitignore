@@ -9,6 +9,7 @@ frontend/dist/
 backend/vendor/
 backend/node_modules/
 backend/.env
+backend_custom/.env
 backend/.phpunit.result.cache
 backend/storage/*.key
 backend/storage/logs/*.log

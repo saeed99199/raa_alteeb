@@ -17,10 +17,9 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
 
-COPY backend/composer.json backend/composer.lock /app/backend/
-RUN cd /app/backend && composer install --no-dev --optimize-autoloader --no-interaction
-
 COPY backend /app/backend
+
+RUN cd /app/backend && composer install --no-dev --optimize-autoloader --no-interaction
 
 WORKDIR /app/backend
 
